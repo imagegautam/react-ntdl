@@ -1,5 +1,5 @@
 import axios from "axios";
-const apiEP = import.meta.env.VITE_MONGODB_URL + "/api/v1/tasks";
+const apiEP = import.meta.env.VITE_API_URL + "/api/v1/tasks";
 
 export const postNewTask = async (taskObj) => {
   try {
