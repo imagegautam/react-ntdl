@@ -1,5 +1,5 @@
 import axios from "axios";
-const apiEP = import.meta.env.MONGODB_URL + "/api/v1/tasks";
+const apiEP = import.meta.env.VITE_MONGODB_URL + "/api/v1/tasks";
 
 export const postNewTask = async (taskObj) => {
   try {
@@ -31,7 +31,7 @@ export const getAllTasks = async () => {
 
 export const deleteTasks = async (ids) => {
   try {
-    // const { data } = await axios.delete(apiEP + "/" + _id);
+    
 
     const {data} = await axios.delete(apiEP, {data:ids});
 
